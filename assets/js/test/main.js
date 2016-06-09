@@ -1,9 +1,3 @@
-$(function(){
-    
-        $('.preloader').fadeOut();
-        $('.wrapper-content').css('opacity', '1').fadeIn();
-        $('#custumize-style').fadeIn();
-});
 jQuery(document).ready(function($) {
 
     "use strict";
@@ -13,12 +7,12 @@ jQuery(document).ready(function($) {
     /* ---------------------------------------------------------------------- */
 
     /*Page Preloading*/
-//    $(window).load(function() {
-//        $('.preloader').fadeOut();
-//        $('.wrapper-content').css('opacity', '1').fadeIn();
-//        $('#custumize-style').fadeIn();
-//    });
-    
+    $(window).load(function() {
+        $('.preloader').fadeOut();
+        $('.wrapper-content').css('opacity', '1').fadeIn();
+        $('#custumize-style').fadeIn();
+    });
+
     /* ---------------------------------------------------------------------- */
     /* ------------------- opens the menu responsive ------------------------ */
     /* ---------------------------------------------------------------------- */
@@ -312,38 +306,38 @@ jQuery(document).ready(function($) {
     /* --------------------------- Map Contact ------------------------------ */
     /* ---------------------------------------------------------------------- */
 
-    // if ($('#map_canvas').length > 0) {
-        // initializes();
-    // }
+    if ($('#map_canvas').length > 0) {
+        initializes();
+    }
 
-    // function initializes() {
-        // var contentString = '<div id="gmaps">' +
-                // '<img src="http://demo.flexy-codes.com/flexyblog/images/writers/staff-1.jpg" alt="" /><br />' +
-                // '<p style="font-family: Arial, Helvetica, sans-serif;">44 E. 8th Street Suite 300 Holland.<br /><br />Phone: +61 3 8376 6284</p>' +
-                // '</div>';
+    function initializes() {
+        var contentString = '<div id="gmaps">' +
+                '<img src="http://demo.flexy-codes.com/flexyblog/images/writers/staff-1.jpg" alt="" /><br />' +
+                '<p style="font-family: Arial, Helvetica, sans-serif;">44 E. 8th Street Suite 300 Holland.<br /><br />Phone: +61 3 8376 6284</p>' +
+                '</div>';
 
-        // var infowindow = new google.maps.InfoWindow({
-            // content: contentString
-        // });
+        var infowindow = new google.maps.InfoWindow({
+            content: contentString
+        });
 
 
-        // var mapOptions = {
-            // zoom: 14,
-            // center: new google.maps.LatLng(-37.815921, 144.964085),
-            // mapTypeId: google.maps.MapTypeId.ROADMAP
-        // }
-        // var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
-        // var marker = new google.maps.Marker({
-            // position: new google.maps.LatLng(-37.815921, 144.964085),
-            // map: map,
-            // title: '44 E. 8th Street Suite 300 Holland.',
-            // icon: 'images/map-marker.png'
-        // });
-        // google.maps.event.addListener(marker, 'click', function() {
-            // infowindow.open(map, marker);
-        // });
+        var mapOptions = {
+            zoom: 14,
+            center: new google.maps.LatLng(-37.815921, 144.964085),
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        }
+        var map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
+        var marker = new google.maps.Marker({
+            position: new google.maps.LatLng(-37.815921, 144.964085),
+            map: map,
+            title: '44 E. 8th Street Suite 300 Holland.',
+            icon: 'images/map-marker.png'
+        });
+        google.maps.event.addListener(marker, 'click', function() {
+            infowindow.open(map, marker);
+        });
 
-    // }
+    }
 
     $("#tabs").click(function() {
         if ($(this).hasClass('tab_close')) {

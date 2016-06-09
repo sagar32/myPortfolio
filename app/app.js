@@ -8,10 +8,6 @@ myPortfolio.config(['$stateProvider', '$urlRouterProvider', function ($stateProv
                 })
                 .state("home", {
                     url: "/home",
-                    templateUrl: 'index1.html',
-                    controller: 'Ctrl'
+                    templateUrl: 'index1.html'
                 });
-    }])
-        .controller("Ctrl", function ($scope) {
-            $scope.test = "success";
-        });
+    }]);

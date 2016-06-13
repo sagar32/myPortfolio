@@ -8,6 +8,6 @@ myPortfolio.config(['$stateProvider', '$urlRouterProvider', function ($stateProv
                 })
                 .state("home", {
                     url: "/home",
-                    templateUrl: 'index1.html'
+                    templateUrl: 'home.html'
                 });
     }]);
